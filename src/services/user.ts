@@ -217,6 +217,8 @@ export class UserService {
 				where: { id: userId },
 				data: {
 					nickname: "Deleted Account",
+					discord: null,
+					discordUserId: null,
 					role: "deleted"
 				}
 			})
