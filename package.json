@@ -4,7 +4,7 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"exec": "concurrently \"caddy run --config ./Caddyfile\" \"npm run dev\"",
+		"exec": "concurrently -n caddy,backend,frontend -c blue,green,magenta \"caddy run --config ./Caddyfile\" \"npm run dev\" \"cd frontend2 && pnpm dev\"",
 		"dev": "tsx watch src",
 		"build": "tsc",
 		"start": "node dist",
